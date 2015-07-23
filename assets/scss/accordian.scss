@@ -19,6 +19,7 @@ html {
 $main-font: Helvetica, sans-serif;
 $header-button-color: #4B4C51;
 $header-button-hulk: #729F27;
+$header-text-hulk: ;
 $item-padding: 10px;
 
 // starting scss
@@ -26,6 +27,7 @@ $item-padding: 10px;
 .menu {
     @include outer-container(250px);
     font-family: $main-font;
+    border: 2px solid darken($header-button-color, 20%);
 }
 .menu li {
     @include span-columns(12);
@@ -35,18 +37,33 @@ $item-padding: 10px;
 i, h2 {
     float: left;
 }
-span {
+.total {
     float: right;
+}
+i, h2, h3, .total {
+    padding: 5px 10px;
 }
 .top-item {
     color: white;
     background: $header-button-color;
-    i, h2, span {
-        padding: 5px 10px;
-    }
-    span {
+    .total {
         border-radius: 5px;
         background: darken($header-button-color, 20%);
+    }
+}
+.top-item:hover {
+    background: lighten($header-button-hulk, 5%);
+    color: darken($header-button-hulk, 20%);
+    .total {
+        background: darken($header-button-hulk, 20%);
+        color: white;
+    }
+}
+.hulk {
+    background: $header-button-hulk;
+    color: darken($header-button-hulk, 15%);
+    .total {
+        background: darken($header-button-hulk, 15%);
     }
 }
 
