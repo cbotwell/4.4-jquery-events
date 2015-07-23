@@ -19,8 +19,10 @@ html {
 $main-font: Helvetica, sans-serif;
 $header-button-color: #4B4C51;
 $header-button-hulk: #729F27;
-$header-text-hulk: ;
 $item-padding: 10px;
+$sub-menu-button-color: #DFDFDF;
+$sub-menu-border: 1px solid #BDBDBD;
+
 
 // starting scss
 
@@ -51,6 +53,9 @@ i, h2, h3, .total {
         background: darken($header-button-color, 20%);
     }
 }
+
+// Styling header button hover and hulk
+
 .top-item:hover {
     background: lighten($header-button-hulk, 5%);
     color: darken($header-button-hulk, 20%);
@@ -67,4 +72,31 @@ i, h2, h3, .total {
     }
 }
 
+// Styling sub-menu
 
+li.sub {
+    padding: 0;
+    display: none;
+}
+.sub-menu {
+    list-style-type: decimal-leading-zero;
+    list-style-position: inside
+}
+.sub-menu li {
+    display:list-item;
+    background: $sub-menu-button-color;
+    border-bottom: $sub-menu-border;
+    position: relative;
+
+    .total {
+        border: $sub-menu-border;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+    }
+}
+.sub-menu li:last-of-type {
+    border-bottom: none;
+}
