@@ -27,7 +27,7 @@ $sub-menu-border: 1px solid #BDBDBD;
 // starting scss
 
 .menu {
-    @include outer-container(250px);
+    @include outer-container(300px);
     font-family: $main-font;
     border: 2px solid darken($header-button-color, 20%);
 }
@@ -68,7 +68,9 @@ i, h2, h3, .total {
     background: $header-button-hulk;
     color: darken($header-button-hulk, 15%);
     .total {
+        border-radius: 5px;
         background: darken($header-button-hulk, 15%);
+        color: white;
     }
 }
 
@@ -77,10 +79,6 @@ i, h2, h3, .total {
 li.sub {
     padding: 0;
     display: none;
-}
-li.open {
-    padding: 0;
-    display: block;
 }
 .sub-menu {
     list-style-type: decimal-leading-zero;
