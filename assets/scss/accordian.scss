@@ -78,6 +78,10 @@ li.sub {
     padding: 0;
     display: none;
 }
+li.open {
+    padding: 0;
+    display: block;
+}
 .sub-menu {
     list-style-type: decimal-leading-zero;
     list-style-position: inside
@@ -93,7 +97,7 @@ li.sub {
         border-radius: 5px;
         position: absolute;
         top: 50%;
-        right: 5px;
+        right: 10px;
         transform: translateY(-50%);
     }
 }
