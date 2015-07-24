@@ -33,9 +33,10 @@ $sub-menu-border: 1px solid #BDBDBD;
 }
 .menu li {
     @include span-columns(12);
-    padding: $item-padding;
 }
+
 // styling header button
+
 i, h2 {
     float: left;
 }
@@ -45,18 +46,26 @@ i, h2 {
 i, h2, h3, .total {
     padding: 5px 10px;
 }
-.top-item {
+button {
+    border: none;
     color: white;
     background: $header-button-color;
+    padding: $item-padding;
+    @include span-columns(12);
+    font-size: 1em;
     .total {
         border-radius: 5px;
         background: darken($header-button-color, 20%);
     }
 }
 
+button:focus {
+    outline: none;
+}
+
 // Styling header button hover and hulk
 
-.top-item:hover {
+button:hover {
     background: lighten($header-button-hulk, 5%);
     color: darken($header-button-hulk, 20%);
     .total {
@@ -76,19 +85,17 @@ i, h2, h3, .total {
 
 // Styling sub-menu
 
-li.sub {
-    padding: 0;
-    display: none;
-}
 .sub-menu {
     list-style-type: decimal-leading-zero;
-    list-style-position: inside
+    list-style-position: inside;
+    display: none;
 }
 .sub-menu li {
-    display:list-item;
+    display:block;
     background: $sub-menu-button-color;
     border-bottom: $sub-menu-border;
     position: relative;
+    padding: $item-padding;
 
     .total {
         border: $sub-menu-border;

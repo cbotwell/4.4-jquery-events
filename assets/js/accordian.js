@@ -1,9 +1,8 @@
 var topItemEl = $('.top-item');
-var subEl = $('li.sub');
 
 topItemEl.on('click', function() {
-  var id = $(this).data('opens');
-  $(this).addClass('hulk');
-  $('#' + id).slideDown('slow', function() {
-  });
+  $(this).children('button').addClass('hulk');
+  $(this).children('.sub-menu').slideDown('slow');
+  // find('button').removeClass('hulk');
+  // find('.sub-menu').slideUp('slow');
 });
