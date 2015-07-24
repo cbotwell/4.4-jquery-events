@@ -32,7 +32,7 @@ $sub-menu-border: 1px solid #BDBDBD;
     border: 2px solid darken($header-button-color, 20%);
     margin-top: 20px;
 }
-.menu li {
+.menu > li {
     @include span-columns(12);
 }
 
@@ -87,6 +87,7 @@ button:hover {
 // Styling sub-menu
 
 .sub-menu {
+    clear: both;
     display: none;
     list-style-position: inside;
     list-style-type: decimal-leading-zero;
