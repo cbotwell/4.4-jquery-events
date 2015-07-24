@@ -14,9 +14,10 @@ var includePaths = [
 ];
 
 var vendor = funnel('bower_components', {
-    files: ['jquery/dist/jquery.min.js']
+  files: ['jquery/dist/jquery.min.js']
 });
 
-var compiledCss = sass (includePaths, 'accordian.scss', 'accordian.css');
+var accordianCss = sass (includePaths, 'accordian.scss', 'accordian.css');
+var keyboardCss = sass (includePaths, 'keyboard.scss', 'keyboard.css');
 
-module.exports = merge([publicWithReload, 'assets/js', compiledCss, vendor]);
+module.exports = merge([publicWithReload, 'assets/js', accordianCss, keyboardCss, vendor]);
