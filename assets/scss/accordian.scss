@@ -30,6 +30,7 @@ $sub-menu-border: 1px solid #BDBDBD;
     @include outer-container(300px);
     font-family: $main-font;
     border: 2px solid darken($header-button-color, 20%);
+    margin-top: 20px;
 }
 .menu li {
     @include span-columns(12);
@@ -90,6 +91,7 @@ button:hover {
     list-style-position: inside;
     display: none;
 }
+
 .sub-menu li {
     display:block;
     background: $sub-menu-button-color;
@@ -106,6 +108,7 @@ button:hover {
         transform: translateY(-50%);
     }
 }
+
 .sub-menu li:last-of-type {
     border-bottom: none;
 }
