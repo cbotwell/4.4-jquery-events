@@ -87,13 +87,13 @@ button:hover {
 // Styling sub-menu
 
 .sub-menu {
-    list-style-type: decimal-leading-zero;
-    list-style-position: inside;
     display: none;
+    list-style-position: inside;
+    list-style-type: decimal-leading-zero;
 }
 
 .sub-menu li {
-    display:block;
+    display:list-item;
     background: $sub-menu-button-color;
     border-bottom: $sub-menu-border;
     position: relative;
