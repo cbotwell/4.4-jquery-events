@@ -36,7 +36,7 @@ $text-color: black;
     transform: translate( -50%, -50%);
 }
 textarea {
-    width: 590px;
+    width: 616px;
     background: $text-box-color;
     border: none;
     border-radius: 5px;
@@ -75,27 +75,28 @@ button:active {
     margin: 4px 0 4px 0;
 }
 
+.row-one button:last-of-type, .row-two button:last-of-type, .row-three button:last-of-type, .row-four button:last-of-type, .space button{
+    margin: 0;
+}
 .space button {
     width: 100%;
 }
-
 button {
     width: 38px;
     float: left;
-    margin: 0 2px 0 0;
+    margin: 0 4px 0 0;
 }
 .row-one button:last-of-type {
-    margin: 0;
-    width: 66px;
+    width: 70px;
 }
 .row-two button:first-of-type {
-    width: 66px;
+    width: 70px;
 }
 .row-three button:first-of-type, .row-three button:last-of-type {
-    width: 72px;
+    width: 75px;
 }
 .row-four button:first-of-type, .row-four button:last-of-type {
-    width: 92px;
+    width: 96px;
 }
 
 
