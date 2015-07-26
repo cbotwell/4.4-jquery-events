@@ -25,7 +25,7 @@ $text-color: black;
 // global styles
 
 .keyboard {
-    @include outer-container(980px);
+    @include outer-container(695px);
     background: $keyboard-color;
     font-family: $font;
     color: $text-color;
@@ -36,7 +36,7 @@ $text-color: black;
     transform: translate( -50%, -50%);
 }
 textarea {
-    width: 100%;
+    width: 590px;
     background: $text-box-color;
     border: none;
     border-radius: 5px;
@@ -51,10 +51,10 @@ button {
     background: $button-color;
     border: none;
     border-radius: 5px;
-    font-size: 1em;
-    margin: 2px 0;
+    font-size: 0.7em;
     padding: 10px;
     text-align: center;
+    height: 38px;
 }
 button:focus {
     outline: none;
@@ -71,10 +71,31 @@ button:active {
 
 .row-one, .row-two, .row-three, .row-four, .space {
     width: 100%;
+    overflow: auto;
+    margin: 4px 0 4px 0;
 }
 
 .space button {
     width: 100%;
+}
+
+button {
+    width: 38px;
+    float: left;
+    margin: 0 2px 0 0;
+}
+.row-one button:last-of-type {
+    margin: 0;
+    width: 66px;
+}
+.row-two button:first-of-type {
+    width: 66px;
+}
+.row-three button:first-of-type, .row-three button:last-of-type {
+    width: 72px;
+}
+.row-four button:first-of-type, .row-four button:last-of-type {
+    width: 92px;
 }
 
 
