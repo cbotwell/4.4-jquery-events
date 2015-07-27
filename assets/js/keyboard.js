@@ -1,3 +1,4 @@
+(function() {
 var buttonEl = $('button');
 var textArea = $('textarea');
 
@@ -30,3 +31,4 @@ buttonEl.on('click', function() {
 //   buttonEl.each($(this).html($(this).data('normal')));
 // }
 
+})();
