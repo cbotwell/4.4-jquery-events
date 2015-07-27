@@ -19,5 +19,6 @@ var vendor = funnel('bower_components', {
 
 var accordianCss = sass (includePaths, 'accordian.scss', 'accordian.css');
 var keyboardCss = sass (includePaths, 'keyboard.scss', 'keyboard.css');
+var calendarCss = sass (includePaths, 'calendar.scss', 'calendar.css');
 
-module.exports = merge([publicWithReload, 'assets/js', accordianCss, keyboardCss, vendor]);
+module.exports = merge([publicWithReload, 'assets/js', accordianCss, keyboardCss, calendarCss, vendor]);
