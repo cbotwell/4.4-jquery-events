@@ -1883,14 +1883,18 @@ body {
     float: right;
     position: relative;
     top: 0; }
+  .top .fa-caret-left:active, .top .fa-caret-right:active {
+    color: #9BD33D; }
   .top p {
     text-align: center; }
   .top span {
-    color: #74ae18;
+    color: #b0dc67;
     margin: 0 10px; }
   .top .month {
     color: gray;
     margin: 0; }
+  .top .year {
+    color: white; }
 
 .bottom {
   padding: 20px; }
