@@ -1,3 +1,4 @@
+(function() {
 var topItemEl = $('.top-item');
 
 topItemEl.on('click', function() {
@@ -6,3 +7,4 @@ topItemEl.on('click', function() {
   $(this).siblings().find('button').removeClass('hulk');
   $(this).siblings().find('.sub-menu').slideUp('slow');
 });
+})();

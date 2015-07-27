@@ -1,3 +1,4 @@
+(function() {
 var buttonEl = $('button');
 var textArea = $('textarea');
 
@@ -16,7 +17,7 @@ buttonEl.on('click', function() {
     // buttonEl.html(capsData);
     return false;
   } else if (this.innerHTML === 'return') {
-    textArea.append('/n');
+    textArea.append('\n');
   } else {
     textArea.append(this.innerHTML);
   }
@@ -30,3 +31,4 @@ buttonEl.on('click', function() {
 //   buttonEl.each($(this).html($(this).data('normal')));
 // }
 
+})();
