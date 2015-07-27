@@ -1,0 +1,115 @@
+// imported and box sizing
+
+@import 'reset';
+$fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
+
+@import 'font-awesome';
+@import 'bourbon';
+@import 'neat';
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// variables
+
+$main-font: Helvetica, sans-serif;
+$header-button-color: #4B4C51;
+$header-button-hulk: #729F27;
+$item-padding: 10px;
+$sub-menu-button-color: #DFDFDF;
+$sub-menu-border: 1px solid #BDBDBD;
+
+
+// starting scss
+
+.menu {
+    @include outer-container(300px);
+    font-family: $main-font;
+    border: 2px solid darken($header-button-color, 20%);
+    margin-top: 20px;
+}
+.menu > li {
+    @include span-columns(12);
+}
+
+// styling header button
+
+i, h2 {
+    float: left;
+}
+.total {
+    float: right;
+}
+i, h2, h3, .total {
+    padding: 5px 10px;
+}
+button {
+    border: none;
+    color: white;
+    background: $header-button-color;
+    padding: $item-padding;
+    @include span-columns(12);
+    font-size: 1em;
+    .total {
+        border-radius: 5px;
+        background: darken($header-button-color, 20%);
+    }
+}
+
+button:focus {
+    outline: none;
+}
+
+// Styling header button hover and hulk
+
+button:hover {
+    background: lighten($header-button-hulk, 5%);
+    color: darken($header-button-hulk, 20%);
+    .total {
+        background: darken($header-button-hulk, 20%);
+        color: white;
+    }
+}
+.hulk {
+    background: $header-button-hulk;
+    color: darken($header-button-hulk, 15%);
+    .total {
+        border-radius: 5px;
+        background: darken($header-button-hulk, 15%);
+        color: white;
+    }
+}
+
+// Styling sub-menu
+
+.sub-menu {
+    clear: both;
+    display: none;
+    list-style-position: inside;
+    list-style-type: decimal-leading-zero;
+}
+
+.sub-menu li {
+    display:list-item;
+    background: $sub-menu-button-color;
+    border-bottom: $sub-menu-border;
+    position: relative;
+    padding: $item-padding;
+
+    .total {
+        border: $sub-menu-border;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+    }
+}
+
+.sub-menu li:last-of-type {
+    border-bottom: none;
+}

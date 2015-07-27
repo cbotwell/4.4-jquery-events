@@ -1,4 +1,3 @@
-(function() {
 var date = new Date();
 var month = date.getMonth();
 var year = date.getFullYear();
@@ -90,4 +89,3 @@ fwdEl.on('click', function() {
     currentMonth.html('DECEMBER');
   }
 });
-})();

@@ -1,0 +1,102 @@
+// imported and box sizing
+
+@import 'reset';
+$fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
+
+@import 'font-awesome';
+@import 'bourbon';
+@import 'neat';
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// variables
+
+$keyboard-color: #EAEAEA;
+$button-color: white;
+$text-box-color: white;
+$font: HelveticaNeue, Helvetica, sans-serif;
+$text-color: black;
+
+// global styles
+
+.keyboard {
+    @include outer-container(695px);
+    background: $keyboard-color;
+    font-family: $font;
+    color: $text-color;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+}
+textarea {
+    width: 616px;
+    background: $text-box-color;
+    border: none;
+    border-radius: 5px;
+    height: 200px;
+    padding: 5px;
+    font-size: 1em;
+}
+textarea:focus {
+    outline: none;
+}
+button {
+    background: $button-color;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.7em;
+    padding: 10px;
+    text-align: center;
+    height: 38px;
+}
+button:focus {
+    outline: none;
+}
+button:hover {
+    background: darken($button-color, 5%);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+// styling keys
+
+.row-one, .row-two, .row-three, .row-four, .space {
+    width: 100%;
+    overflow: auto;
+    margin: 4px 0 4px 0;
+}
+
+.row-one button:last-of-type, .row-two button:last-of-type, .row-three button:last-of-type, .row-four button:last-of-type, .space button{
+    margin: 0;
+}
+.space button {
+    width: 100%;
+}
+button {
+    width: 38px;
+    float: left;
+    margin: 0 4px 0 0;
+}
+.row-one button:last-of-type {
+    width: 70px;
+}
+.row-two button:first-of-type {
+    width: 70px;
+}
+.row-three button:first-of-type, .row-three button:last-of-type {
+    width: 75px;
+}
+.row-four button:first-of-type, .row-four button:last-of-type {
+    width: 96px;
+}
+
+
