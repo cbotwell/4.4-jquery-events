@@ -77,7 +77,7 @@ fwdEl.on('click', function() {
     currentMonth.html('JUNE');
   } else if (currentMonth.html() === 'JUNE') {
     currentMonth.html('JULY');
-  } else if (fcurrentMonth.html() === 'JULY') {
+  } else if (currentMonth.html() === 'JULY') {
     currentMonth.html('AUGUST');
   } else if (currentMonth.html() === 'AUGUST') {
     currentMonth.html('SEPTEMBER');
