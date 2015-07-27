@@ -11,9 +11,22 @@ buttonEl.on('click', function() {
   } else if (this.innerHTML === 'delete') {
     var newText = textArea.html().slice(0, -1);
     textArea.html(newText);
-  } else if (this.innerHTML === 'caps lock' || this.innerHTML === 'shift' || this.innerHTML === 'return') {
+  } else if (this.innerHTML === 'caps lock' || this.innerHTML === 'shift') {
+    // var capsData = buttonEl.data('caps');
+    // buttonEl.html(capsData);
     return false;
+  } else if (this.innerHTML === 'return') {
+    textArea.append('/n');
   } else {
     textArea.append(this.innerHTML);
   }
 });
+
+// var capsEl = $('caps');
+
+// var mode = 'normal';
+
+// if (mode = 'normal') {
+//   buttonEl.each($(this).html($(this).data('normal')));
+// }
+
