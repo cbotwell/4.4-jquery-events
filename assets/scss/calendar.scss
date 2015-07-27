@@ -18,7 +18,7 @@ html {
 
 $bg-color: #0F1011;
 $primary-color: white;
-$alt-color: #568112;
+$alt-color: #9BD33D;
 $main-font: HelveticNeue, Helvetica, sans-serif;
 
 // starting scss
@@ -45,6 +45,9 @@ body {
         position: relative;
         top: 0;
     }
+    .fa-caret-left:active, .fa-caret-right:active {
+        color: $alt-color;
+    }
     p {
         text-align: center;
     }
@@ -55,6 +58,9 @@ body {
     .month {
         color: darken($primary-color, 50%);
         margin: 0;
+    }
+    .year {
+        color: $primary-color;
     }
 }
 .bottom {
